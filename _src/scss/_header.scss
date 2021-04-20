@@ -1,0 +1,72 @@
+.header__flex-box {
+	padding-top: 40px;
+}
+
+.header__logo {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	color: #000000;
+	margin-right: 41px;
+}
+
+.header__nav {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: $bold-text;
+	.header__nav-item {
+		margin-right: 44px;
+		span {
+			margin-right: 12px;
+		}
+		i {
+			content: $bold-text;
+		}
+	}
+}
+
+.header__icon-right {
+	margin-right: 34px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.header__search-form {
+	width: 473px;
+	height: 45px;
+	background-color: #fff;
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 21px;
+	color: #616161;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative; //чтобы поместить иконку поверх ввода
+	.icon {
+		color: $bold-text;
+		position: absolute; //  вгоняем иконку внутрь поля ввода
+		top: 30%; //  и располагаем посреди этого поля
+		z-index: 1;
+		margin-left: 15px;	}
+	input {
+		position: absolute;
+		left: 44px;
+		height: 100%;
+		width: 429px; //473-44
+		float: left;
+		
+		&::placeholder {
+			//padding-left: 44px;
+			color: #616161;
+		}
+
+	}
+}
