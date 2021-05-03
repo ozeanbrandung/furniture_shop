@@ -4,6 +4,166 @@
 @import "header";
 @import "footer";
 
+.container {
+	position: relative;
+	overflow: hidden; //как бы это следовало бы убрать, однако не очень выглядит - подумай, что с этим делать
+}
+
+.preview {
+	height: 90vh;
+}
+
+.prompt-card {
+	width: 494px;
+	height: 553px;
+	background-color: #FFFFFF;
+	opacity: 0.7;
+	padding: 60px;
+	position: absolute;
+	z-index: 1;
+	top: 70px;
+	//left: 70px;
+	left: 30px; //по макету явно должно быть ноль, но со слайдером заканчиающимся на контейнере смотрится не оч
+	.prompt-card__heading {
+		font-family: Gilroy;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 56px;
+		line-height: 1.2;
+		color: darken(#3A3A3A, 20%);
+		margin-bottom: 16px;
+	}
+	.prompt-card__content {
+		font-family: Gilroy;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.5;
+		color: #898989;
+		margin-bottom: 48px;
+	}
+	.prompt-card__button {
+		width: 374px;
+		height: 78px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 150%;
+		text-align: center;
+		padding-top: 25px;
+		opacity: 1;
+		&:hover {
+			background-color: darken($primary, 30%);
+			cursor: pointer;
+			user-select: none; //шоб не могли выделять
+		}
+	}
+}
+
+
+#slider-block {
+	z-index: 0;
+	width: 934px;
+	height: 553px;
+	position: relative; //по отношению к контейнеру
+	left: 306px;
+	padding: 130px 0 100px 0;
+}
+
+#viewport {
+	width: 100%;
+	position: relative;
+	//overflow: hidden;
+    //-webkit-user-select: none;
+    //-moz-user-select: none;
+    //-ms-user-select: none;
+    //-o-user-select: none;
+	user-select: none;
+	text-align: center;
+}
+
+#slidewrapper {
+	position: relative;
+	width: calc(100% * 4);
+    //-webkit-transition: 1s;
+    //-o-transition: 1s;
+	transition: 1s;
+    //-webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    //-o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+	transition-timing-function: cubic-bezier(.67,.01,.23,1);
+}
+
+.slide {
+	width: calc(100%/4);
+	float: left;
+	padding-left: 32px;
+}
+
+.slide-img {
+	width: 100%;
+}
+
+#prev-btn, #next-btn {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background-color: lighten($primary, 20%);
+	border-radius: 50%;
+	//top: -60px;
+	bottom: 600px;
+	left:410px;
+	color: $primary;
+	font-size: 20px;
+	font-weight: 300;
+	padding-top: 13px;
+	text-align: center;
+}
+
+#prev-btn:hover, #next-btn:hover, {
+	cursor: pointer;
+	background-color: $primary;
+	color: #fff;
+}
+
+#prev-btn > .fas:hover, #next-btn > .fas:hover {
+	cursor: pointer;
+	background-color: $primary;
+	color: #fff;
+}
+
+#prev-btn {
+	//right: 60px;
+}
+
+#next-btn {
+	//right: 5px;
+	margin-left: 5px;
+}
+
+#nav-btns {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.slide-nav-btn {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.slide-nav-btn:hover {
+    cursor: pointer;
+}
+
 
 .products {
 	.products__grid-box {
@@ -80,7 +240,9 @@
 	}
 }
 
-#slider-block {
+
+/*SIMPLE SLIDER COMMETNED OUT*/
+/*#slider-block {
 	width: 404px;
 	height: 582px;
 	margin: 0 auto;
@@ -90,10 +252,10 @@
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-    /*-webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;*/
+    //-webkit-user-select: none;
+    //-moz-user-select: none;
+    //-ms-user-select: none;
+    //-o-user-select: none;
 	user-select: none;
 	text-align: center;
 	background-color: gray;
@@ -102,11 +264,11 @@
 #slidewrapper {
 	position: relative;
 	width: calc(100% * 4);
-    /*-webkit-transition: 1s;
-    -o-transition: 1s;*/
+    //-webkit-transition: 1s;
+    //-o-transition: 1s;
 	transition: 1s;
-    /*-webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
-    -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);*/
+    //-webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    //-o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
 	transition-timing-function: cubic-bezier(.67,.01,.23,1);
 }
 
@@ -169,3 +331,5 @@
 .slide-nav-btn:hover {
     cursor: pointer;
 }
+
+END OF SLIDER*/

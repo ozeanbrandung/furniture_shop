@@ -9,13 +9,55 @@
 	<title>Furniture Shop</title>
 </head>
 <body>
-<div class="double-bg">
+
 	@@include('_header.html')
 	<main class="main">
-		<section class="prewiew">
+		<section class="preview">
+			<div class="double-bg">
+			<div class="container">
+
+				<div class="prompt-card">
+					<h1 class="prompt-card__heading">
+						High-Quality Furniture Just For You
+					</h1>
+					<p class="prompt-card__content">
+						Our furniture is made from selected and best quality materials that are suitable for your dream home
+					</p>
+					<div class="prompt-card__button button">
+						Shop Now
+					</div>
+				</div>
+
+
+				<div id="slider-block">
+					<div id="viewport">
+
+						<ul id="slidewrapper">
+               				<li class="slide"><img src="img/headerslide1.png" alt="slider item 1" class="slide-img"></li>
+               				<li class="slide"><img src="img/headerslide1.png" alt="slider item 2" class="slide-img"></li>
+               				<li class="slide"><img src="img/headerslide1.png" alt="slider item 3" class="slide-img"></li>
+               				<li class="slide"><img src="img/headerslide1.png" alt="slider item 4" class="slide-img"></li>
+               			</ul>
+
+						<div id="prev-next-btns">
+							<div id="prev-btn"> <i class="fas fa-chevron-left"></i> </div>
+							<div id="next-btn"> <i class="fas fa-chevron-right"></i> </div>
+						</div>
+
+						<ul id="nav-btns">
+							<li class="slide-nav-btn"></li>
+							<li class="slide-nav-btn"></li>
+							<li class="slide-nav-btn"></li>
+							<li class="slide-nav-btn"></li>
+						</ul>
+		
+					</div>
+				</div>
+			</div> <!-- container end -->
+			</div> <!-- double-bg end -->
 			
 		</section>
-</div>
+
 		<section class="products">
 			<div class="container">
 			<h2 class="products__heading section-heading">Our Products</h2>
@@ -132,8 +174,8 @@
 					<div class="portfolio__button button">Explore More</div>
 				</div>
 
-				
-				<div id="slider-block">
+				<!-- FIRST SIMPLE SLIDER COMMENTED OUT -->
+				<!-- <div id="slider-block">
 					<div id="viewport">
 
 						<ul id="slidewrapper">
@@ -156,7 +198,7 @@
 						</ul>
 		
 					</div>
-				</div>
+				</div> -->
 
 
 			</div>
