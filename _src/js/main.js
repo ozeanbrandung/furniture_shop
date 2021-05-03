@@ -1,1 +1,1 @@
-// @@include('testwebp.js')
+@@include('slider.js')
